@@ -1,0 +1,150 @@
+.hero {
+width: 1880px;
+    h1,
+    p {
+        margin: 0 auto;
+    }
+
+    background: #131e2a;
+    border-radius: 8px;
+
+    &__content {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img:hover {
+            transform: scale3d(1.1, 1.2, 0.2);
+        }
+
+        .ikon {
+            gap: 50px;
+            display: flex;
+            align-items: center;
+
+           
+
+            .ikons-info {
+                display: flex;
+                gap: 15px;
+
+                img {
+                    cursor: pointer;
+                }
+
+                img+img:hover {
+
+                    transition: .9s;
+                    transform: rotateY(360deg) scale(1);
+
+                }
+
+                h1 {
+                    @include usualP(#fff, 18px, 700);
+
+                }
+
+                p {
+                    @include usualP(#697d94, 14px, 600);
+
+                }
+
+            }
+
+            .first {
+                p {
+                    @include usualP(#ff2c2c, 16px, 700);
+                }
+            }
+
+            .second {
+                p {
+                    @include usualP(#697d94, 12px);
+                    text-align: center;
+
+                    +p {
+                        @include usualP(#21af40, 14px, 600);
+
+                    }
+                }
+            }
+
+            .third {
+                p {
+                    @include usualP(#697d94, 12px);
+                    text-align: center;
+
+                    +p {
+                        @include usualP(#fff, 14px, 600);
+
+                    }
+                }
+            }
+
+            .fourth {
+                p {
+                    @include usualP(#697d94, 12px);
+                    text-align: center;
+
+                    +p {
+                        @include usualP(#fff, 14px, 600);
+
+                    }
+                }
+            }
+
+            .fifth {
+                p {
+                    @include usualP(#697d94, 12px);
+                    text-align: center;
+
+                    +p {
+                        @include usualP(#fff, 14px, 600);
+
+                    }
+                }
+            }
+
+            .sixth {
+                p {
+                    @include usualP(#697d94, 12px);
+                    text-align: center;
+
+                    +p {
+                        @include usualP(#ffc121, 14px, 600);
+
+                    }
+                }
+
+                span {
+                    @include usualP(#fff, 14px, 600);
+                }
+            }
+        }
+
+        .set {
+            display: flex;
+            gap: 15px;
+
+
+            a {
+                @include usualP(#fff, 12px);
+                text-decoration: none;
+                transition: .3s;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    color: #3830c5;
+                }
+            }
+
+            .text {
+                border-right: solid 2px #fff;
+                padding-right: 15px;
+            }
+
+        }
+    }
+}

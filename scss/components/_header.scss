@@ -1,0 +1,63 @@
+.header {
+    width: 1880px;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .link {
+            display: flex;
+            gap: 100px;
+
+            img:hover {
+                transition: .9s;
+                transform: rotateY(360deg) scale(1);
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 25px;
+
+            a {
+                @include usualP(#fff, 16px);
+                text-align: right;
+                text-decoration: none;
+                transition: .3s;
+
+                &:hover {
+                    color: #3830c5;
+                }
+            }
+        }
+
+        .start {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: flex-end;
+
+            a {
+                @include usualP(#fff, 16px);
+                text-decoration: none;
+                transition: .3s;
+                text-align: left;
+
+                &:hover {
+                    color: #3830c5;
+                }
+            }
+
+            button {
+                padding: 13px 40px;
+                @include button(6px, #2e4ce5, none, .3s, pointer);
+                @include usualP(#fff, 16px);
+
+                &:hover {
+                    @include hoverB(#fff, #2e4ce5);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,562 @@
+.plaque {
+  &__content {
+    max-width: 1469px;
+    height: 1092px;
+    display: flex;
+    .plaque-left {
+      .graph {
+        max-width: 1469px;
+        height: 700px;
+        padding: 10px 0;
+        .major {
+          display: flex;
+          justify-content: flex-end;
+
+          &__content {
+            position: absolute;
+
+            .major-top-table {
+              height: 153px;
+              padding: 15px;
+              background: #131e2a;
+              width: 400px;
+              border-radius: 8px;
+
+              td {
+                cursor: pointer;
+              }
+
+              .recent {
+                @include usualP(#fff, 14px, 700);
+                border-bottom: 1px solid #b9b9b9;
+                display: flex;
+                justify-content: space-between;
+                row-gap: 5px;
+                width: 370px;
+                padding-bottom: 5px;
+              }
+              tbody {
+                row-gap: 10px;
+                display: grid;
+                padding-top: 5px;
+                tr {
+                  display: flex;
+
+                  td {
+                    flex-shrink: 1;
+                    width: 100%;
+                  }
+                }
+                .even {
+                  flex-shrink: 2;
+                }
+                tr {
+                  .zero {
+                    @include usualP(#21af40, 12px);
+                    gap: 5px;
+                    display: flex;
+                  }
+                  td {
+                    @include usualP(#fff, 12px);
+                  }
+                }
+
+                tr {
+                  .first {
+                    @include usualP(#ff2c2c, 12px);
+                    gap: 5px;
+                    display: flex;
+                  }
+                  td {
+                    @include usualP(#fff, 12px);
+                  }
+                }
+              }
+            }
+            .major-bottom-table {
+              @include widHei(402px, 499px);
+              padding: 15px;
+              border-radius: 8px;
+              background: #131e2a;
+              margin-top: 10px;
+
+              td {
+                cursor: pointer;
+              }
+
+              thead {
+                border-bottom: 1px solid #b9b9b9;
+                display: flex;
+                justify-content: space-between;
+                tr {
+                  display: flex;
+                  padding-bottom: 5px;
+                  td {
+                    align-items: center;
+                    display: flex;
+                    @include usualP(#fff, 14px, 700);
+                  }
+                }
+              }
+              tbody {
+                row-gap: 5px;
+                display: grid;
+                padding-top: 5px;
+
+                .even {
+                  flex-shrink: 2;
+                }
+
+                .line {
+                  display: flex;
+                  align-items: end;
+                  padding: 5px 0;
+
+                  .small-btn {
+                    @include widHei(26px, 16px);
+                    @include usualP(#fff, 12px);
+                    padding: 5px 10px;
+                    border-radius: 4px;
+                    border: 1px solid #fff;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    flex-shrink: 2;
+
+                    .lines {
+                      display: flex;
+                      gap: 5px;
+                      align-items: center;
+                    }
+                  }
+                }
+                .middle {
+                  display: flex;
+                  gap: 96px;
+                  justify-content: center;
+
+                  .red {
+                    @include usualP(#ff2c2c, 14px, 700);
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                  }
+                  .yellow {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    @include usualP(#ffc121, 14px, 700);
+                  }
+                }
+                .zeroo {
+                  td {
+                    @include usualP(#697d94, 12px, 700);
+                  }
+                }
+                tr {
+                  display: flex;
+                  justify-content: space-between;
+                  .green {
+                    @include usualP(#21af40, 12px);
+                  }
+                  .first {
+                    @include usualP(#ff2c2c, 12px);
+                  }
+
+                  td {
+                    @include usualP(#fff, 12px);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .info {
+        border-radius: 8px;
+        background: #131e2a;
+        width: 1469px;
+        padding: 15px;
+        box-sizing: border-box;
+        margin-top: 15px;
+
+        .bottom-tab {
+          width: 1439px;
+          background: #1a2839;
+          border-collapse: collapse;
+          cursor: pointer;
+
+          thead {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .thead-item {
+              @include usualP(#fff, 14px);
+              background: #3f5c7e;
+            }
+
+            td {
+              @include usualP(#697d94, 14px);
+              padding: 10px 30px;
+              cursor: pointer;
+            }
+            .last {
+              td {
+                display: flex;
+                gap: 10px;
+
+                a {
+                  @include usualP(#fff, 12px);
+                  text-decoration: none;
+                  transition: 0.3s;
+
+                  &:hover {
+                    color: #3830c5;
+                  }
+                }
+              }
+            }
+          }
+
+          tbody {
+            background: #131e2a;
+            .main {
+              td {
+                padding: 11px 18px 12px 5px;
+                flex-shrink: 1;
+                @include usualP(#9ea7b7, 14px, 600);
+              }
+            }
+
+            tr {
+              border-bottom: 1px solid #f2f2f2;
+              display: flex;
+              gap: 10px;
+
+              td {
+                @include usualP(#535774, 12px);
+                font-family: proxima-nova, sans-serif;
+                padding: 15px 5px;
+                flex-shrink: 1;
+                width: 100%;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+    .plaque-right {
+      @include widHei(400px, 974px);
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      row-gap: 20px;
+      flex-direction: column;
+
+      &__content {
+        .right-top {
+          display: flex;
+
+          .left-item {
+            background: #131e2a;
+            display: flex;
+            justify-content: space-between;
+            width: 356px;
+            padding: 10px 20px;
+            border-radius: 4px;
+
+            div {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+            }
+            p {
+              @include usualP(#fff, 14px);
+              margin: 0 auto;
+            }
+            .green {
+              @include usualP(#21af40, 14px);
+            }
+            .red {
+              @include usualP(#ff2c2c, 14px);
+            }
+          }
+        }
+
+        .right-bottom {
+          display: flex;
+          width: 370px;
+          height: 1032px;
+          padding: 15px;
+          flex-direction: column;
+          gap: 20px;
+          border-radius: 8px;
+          background: #131e2a;
+          margin-top: 10px;
+          .open {
+            display: flex;
+            align-items: end;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 5px 0;
+            cursor: pointer;
+
+            .blue {
+              @include usualP(#2e4ce5, 14px, 700);
+            }
+            span {
+              @include usualP(#697d94, 14px, 700);
+              padding: 5px 0;
+            }
+          }
+          .role {
+            background: #1a2839;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+
+            p {
+              @include usualP(#697d94, 14px);
+              padding: 10px 35px;
+              margin: 0;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            .grey {
+              @include usualP(#fff, 14px);
+              background: #3f5c7e;
+            }
+          }
+          .order {
+            position: relative;
+            p {
+              @include usualP(#fff, 12px);
+              margin: 0 0 10px 0;
+            }
+            input {
+              border-radius: 4px;
+              border: 1px solid #697d94;
+              background: #0d151d;
+              padding: 10px;
+              @include widHei(350px, 16px);
+            }
+            label {
+              position: absolute;
+              top: 40px;
+              right: 10px;
+            }
+          }
+          .orderby {
+            position: relative;
+            p {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              @include usualP(#fff, 12px);
+              margin: 0 0 10px 0;
+              cursor: pointer;
+            }
+            input {
+              border-radius: 4px;
+              border: 1px solid #697d94;
+              background: #0d151d;
+              padding: 10px;
+              @include widHei(350px, 16px);
+            }
+            label {
+              position: absolute;
+              top: 40px;
+              right: 10px;
+            }
+          }
+          .percent {
+            display: flex;
+            border-radius: 4px;
+            background: #1a2839;
+            justify-content: space-between;
+
+            p {
+              padding: 5px 25px;
+              @include usualP(#697d94, 12px);
+              border-radius: 4px;
+              margin: 0;
+              display: flex;
+              align-items: flex-end;
+              cursor: pointer;
+            }
+            .grey {
+              @include usualP(#fff, 12px, 600);
+              border-radius: 4px;
+              background: #3f5c7e;
+            }
+          }
+          .choice {
+            display: flex;
+            justify-content: space-between;
+            p {
+              @include usualP(#fff, 12px);
+              display: flex;
+              gap: 10px;
+              margin: 0;
+            }
+          }
+          .coin {
+            display: flex;
+            gap: 100px;
+            div {
+              p {
+                @include usualP(#697d94, 12px);
+                margin: 0;
+              }
+              span {
+                @include usualP(#fff, 14px, 600);
+                margin-top: 5px;
+              }
+            }
+          }
+          .btns {
+            display: flex;
+            justify-content: space-between;
+
+            .green-btn {
+              @include usualP(#fff, 16px, 600);
+              @include button(6px, #21af40, 1px, 0.3s, pointer);
+              padding: 13px 40px;
+              transition: 0.3s;
+              gap: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              &:hover {
+                @include hoverB(#ff2c2c, #fff);
+              }
+            }
+            .red-btn {
+              @include usualP(#fff, 16px, 600);
+              @include button(6px, #ff2c2c, 1px, 0.3s, pointer);
+              padding: 13px 40px;
+              transition: 0.3s;
+              gap: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              &:hover {
+                @include hoverB(#21af40, #fff);
+              }
+            }
+          }
+          .option {
+            display: flex;
+            justify-content: space-between;
+
+            .tick {
+              @include usualP(#fff, 12px);
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              margin: 0;
+            }
+            .details {
+              @include usualP(#fff, 12px);
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              margin: 0;
+              cursor: pointer;
+            }
+          }
+          .visible {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p {
+              @include usualP(#fff, 12px);
+              display: flex;
+              gap: 10px;
+              margin: 0;
+            }
+            span {
+              @include usualP(#ffc121, 12px);
+              display: flex;
+              gap: 5px;
+              cursor: pointer;
+            }
+          }
+          .sum {
+            display: flex;
+            justify-content: space-between;
+
+            .equity,
+            .balance {
+              p,
+              span {
+                @include usualP(#fff, 12px);
+                margin-top: 0;
+                display: flex;
+              }
+              span {
+                justify-content: right;
+              }
+            }
+          }
+          .small-btns {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .small-btn {
+              @include usualP(#fff, 12px);
+              display: flex;
+              padding: 5px 20px;
+              background: #131e2a;
+              align-items: center;
+              border: 1px solid #fff;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: 0.3s;
+
+              &:hover {
+                @include hoverB(#21af40, #fff);
+              }
+            }
+          }
+          .info {
+            thead {
+              @include usualP(#fff, 14px, 700);
+              display: grid;
+              row-gap: 20px;
+            }
+            tbody {
+              display: grid;
+              row-gap: 10px;
+              tr {
+                display: flex;
+
+                justify-content: space-between;
+                td {
+                  @include usualP(#fff, 12px);
+                }
+              }
+            }
+          }
+          .hide {
+            display: flex;
+            justify-content: center;
+            p {
+              display: flex;
+              gap: 5px;
+              margin: 0;
+              cursor: pointer;
+              align-items: center;
+              @include usualP(#697d94, 14px, 700);
+            }
+          }
+        }
+      }
+    }
+  }
+}
